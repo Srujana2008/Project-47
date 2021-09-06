@@ -30,9 +30,9 @@ function setup() {
 	path = createSprite(100,height/2,10,10);
 	path.addImage(path_img);
 	path.scale = 4.5;
-	path.velocityX = -5;
+	path.velocityX = -15;
 
-	boy = createSprite(150, 200, 10, 10);
+	boy = createSprite(250, 200, 10, 10);
 	boy.addAnimation("running", boy_ani);
 	boy.scale = 0.8;
 	Engine.run(engine);
@@ -46,7 +46,7 @@ function draw() {
   //image(path_img, 0, 0, width*3, height);
 
   if(path.x<0){
-	  path.x = 100;
+	  path.x = 1000;
   }
 
   moveBoy();
@@ -120,7 +120,7 @@ function spawnMonsters(){
 		}
 		monster.scale = 0.3;
 		monster.velocityX = -10;
-		//monster.velocityY = -4;
+		monster.velocityY = -4;
 		console.log(monster.y);
 		if(monster.y>height-200){
 			monster.velocityY = -4;
